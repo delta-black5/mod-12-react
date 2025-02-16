@@ -32,7 +32,7 @@ const Main: React.FC = () => {
     </header>
     <div className="content">
         <div className="search-engine-optimization">
-            <img src="https://static.bc-edx.com/coding/full-stack/01-HTML-Git-CSS/assets/search-engine-optimization.jpg" alt="Notebook with writing about SEO" class="float-left" />
+            <img src="https://static.bc-edx.com/coding/full-stack/01-HTML-Git-CSS/assets/search-engine-optimization.jpg" alt="Notebook with writing about SEO" className="float-left" />
             <section>
             <h2>Search Engine Optimization</h2>
             <p>
@@ -42,7 +42,7 @@ const Main: React.FC = () => {
         </div>
    
         <div id="online-reputation-management" className="online-reputation-management">
-            <img src="https://static.bc-edx.com/coding/full-stack/01-HTML-Git-CSS/assets/online-reputation-management.jpg" alt="Person Looking at laptop with the screen reading Reputation" class="float-right" />
+            <img src="https://static.bc-edx.com/coding/full-stack/01-HTML-Git-CSS/assets/online-reputation-management.jpg" alt="Person Looking at laptop with the screen reading Reputation" className="float-right" />
             <section>
             <h2>Online Reputation Management</h2>
             <p>
