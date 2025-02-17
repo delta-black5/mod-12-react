@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import {Button, Row, Col, Card, Form, Container} from 'react-bootstrap';
 const Contact: React.FC= () => {
-  const [name, setName] = useState <string>('');
-  const [email, setEmail] = useState <string>('');
-  const [message, setMessage] = useState <string>('');
+  const [name, setName] = useState <string> ('');
+  const [email, setEmail] = useState <string> ('');
+  const [message, setMessage] = useState <string> ('');
     const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
@@ -45,24 +45,13 @@ const Contact: React.FC= () => {
                                             <Col>
                                                 <Card.Body>
                                                     <Card.Title>
-                                                        <h1 className="title">Tiny Topia</h1>
+                                                        <h1 className="title">Contact Us</h1>
                                                     </Card.Title>
                                                     <Card.Text>
-                                                        <p className="body">Full Tiny Home Service</p>
-                                                        <p className="body">Call Us To Learn More</p>
-                                                        <p className="body">786-763-1234</p>
-                                                    </Card.Text>
-                                                </Card.Body>
-                                            </Col>
-                                            <Col>
-                                                <Card.Body>
-                                                    <Card.Title>
-                                                        <h1 className="title">Tiny Homes</h1>
-                                                    </Card.Title>
-                                                    <Card.Text>
-                                                        <p className="body">We Build On Location</p>
-                                                        <p className="body">Call Us TO Learn More</p>
-                                                        <p className="body">786-763-1234</p>
+                                                        <p className="body">Matthew Unrein</p>
+                                                        <p className="body">769-532-6265</p>
+                                                        <p className="body">email@gmail.com</p>
+                                                        <p className="body">If you have questions or are intested in my services please fill out the form below</p>
                                                     </Card.Text>
                                                 </Card.Body>
                                             </Col>
@@ -75,9 +64,7 @@ const Contact: React.FC= () => {
                 </div>
             </div>
         </header><div className="contact-body">
-                <text className="header">
-                    Get in Touch
-                </text>
+                <text className="header">Get in Touch</text>
                 <Container>
                     <Row>
                         <Col>
@@ -105,8 +92,6 @@ const Contact: React.FC= () => {
     );
 };
 export default Contact;
-
-// line 19-22
 
 
 

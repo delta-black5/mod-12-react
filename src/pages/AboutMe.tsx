@@ -1,34 +1,13 @@
 import React, { useState } from 'react';
 import {Button, Row, Col, Card, Form, Container} from 'react-bootstrap';
-const ContactUs: React.FC= () => {
-  const [name, setName] = useState <string>('');
-  const [email, setEmail] = useState <string>('');
-  const [message, setMessage] = useState <string>('');
-    const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    
-    // Handle form submission, e.g., send data to a server
-    console.log({ name, email, message });
-
-    const formData = {
-        name,
-        email,
-        message,
+const style = {
+    img: {
+        objectFit: 'cover'
     }
-        const contacts = readLocalStorage ();
-        contacts.push ((formData));
-        localStorage.setItem("contactForm", JSON.stringify(contacts));
+};
+
+const ContactUs: React.FC= () => {
     
-    // Clear the form after submission
-    setName('');
-    setEmail('');
-    setMessage('');
-    };
-    
-    const readLocalStorage = () => {
-        const data = localStorage.getItem("contactForm");
-        return data ? JSON.parse(data) : [];
-      };
     return (
       <><header style={{ paddingLeft: 0 }}>
             <div
@@ -45,25 +24,24 @@ const ContactUs: React.FC= () => {
                                             <Col>
                                                 <Card.Body>
                                                     <Card.Title>
-                                                        <h1 className="title">Tiny Topia</h1>
+                                                        <h1 className="title">About Me</h1>
                                                     </Card.Title>
                                                     <Card.Text>
-                                                        <p className="body">Full Tiny Home Service</p>
-                                                        <p className="body">Call Us To Learn More</p>
-                                                        <p className="body">786-763-1234</p>
-                                                    </Card.Text>
+                                                        <p className="body">Learn More About Me</p>
+                                                        </Card.Text>
                                                 </Card.Body>
                                             </Col>
                                             <Col>
                                                 <Card.Body>
-                                                    <Card.Title>
-                                                        <h1 className="title">Tiny Homes</h1>
-                                                    </Card.Title>
-                                                    <Card.Text>
-                                                        <p className="body">We Build On Location</p>
-                                                        <p className="body">Call Us TO Learn More</p>
-                                                        <p className="body">786-763-1234</p>
-                                                    </Card.Text>
+                                                   <div style={{
+                                                        Image: "url('https://png.pngtree.com/png-clipart/20200224/original/pngtree-cartoon-color-simple-male-avatar-png-image_5230557.jpg')",
+                                                        ImageSize: 'cover',
+                                                        ImagePosition: 'center',
+                                                        ImageRepeat: 'no-repeat',
+                                                         height: '100vh',
+                                                        padding: 0,
+                                                        margin: 0
+                                                 } as React.CSSProperties}></div>
                                                 </Card.Body>
                                             </Col>
                                         </Row>
@@ -74,34 +52,34 @@ const ContactUs: React.FC= () => {
                     </div>
                 </div>
             </div>
-        </header><div className="contact-body">
-                <text className="header">
-                    Get in Touch
-                </text>
-                <Container>
-                    <Row>
-                        <Col>
-                            <Form onSubmit={handleSubmit} id="contactForm">
-                                <Form.Group controlId="formBasicName">
-                                    <Form.Label htmlFor="name">Name</Form.Label>
-                                    <Form.Control value= {name} onChange= {(event)=>setName(event.target.value)} type="text" id="name"placeholder="Enter Name" />
-                                </Form.Group>
-                                <Form.Group controlId="formBasicEmail">
-                                    <Form.Label htmlFor="email">Email</Form.Label>
-                                    <Form.Control value= {email} onChange= {(event)=>setEmail(event.target.value)} type="email" id="email"placeholder="Enter Email" />
-                                </Form.Group>
-                                <Form.Group controlId="formBasicMessage">
-                                    <Form.Label htmlFor="message">Message</Form.Label>
-                                    <Form.Control value= {message} onChange= {(event)=>setMessage(event.target.value)} as="textarea" id="message" rows={3} />
-                                </Form.Group>
-                                <Button variant="primary" type="submit">
-                                    Submit
-                                </Button>
-                            </Form>
-                        </Col>
-                    </Row>
-                </Container>
-            </div></> 
+        </header>
+        <div className="contact-body">
+            <div className='mask' style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}>
+                <div className='text-white'>
+                            <div className="contact">
+                                <header className="contact-header">
+                                <Container>
+                                        <Row>
+                                            <Col>
+                                                <Card.Body>
+                                                    <Card.Text>
+                                                        <p className="body">Matthew Unrein is a versatile web developer, 
+                                                            graphic designer, and marketer with a passion for creating visually stunning and highly functional digital experiences. 
+                                                            With expertise in front-end and back-end development, UI/UX design, and strategic marketing, 
+                                                            Matthew Unrein bridges the gap between technology and creativity. They specialize in building user-friendly websites, 
+                                                            crafting compelling brand visuals, and implementing data-driven marketing strategies to help businesses grow. 
+                                                            Whether coding responsive web applications, designing eye-catching graphics, or optimizing campaigns for maximum reach, 
+                                                            Matthew delivers impactful solutions that engage and convert audiences.</p>
+                                                    </Card.Text>
+                                                </Card.Body>
+                                            </Col>
+                                        </Row>
+                                    </Container>
+                                </header>
+                            </div>
+                </div>
+            </div>
+        </div></>
     );
 };
 export default ContactUs;
