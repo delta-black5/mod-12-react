@@ -2,6 +2,42 @@ import React, { useState } from 'react';
 import '../scr/App.css';
 import {Button, Row, Col, Card, Form, Container} from 'react-bootstrap';
 
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Main from "./pages/Main";
+import AboutMe from "./pages/About";
+import Contact from "./pages/Contact";
+import Navbar from "./components/Navbar";
+
+const App: React.FC = () => {
+  return (
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/about" element={<AboutMe />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
+  );
+};
+
+import { Link } from "react-router-dom";
+
+const Navbar: React.FC = () => {
+  return (
+    <nav>
+      <ul>
+        <li><Link to="/">Main</Link></li>
+        <li><Link to="/About Me">Me</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
+        <li><Link to="/Resume">Resume</Link></li>
+      </ul>
+    </nav>
+  );
+};
+
+
+
 const Main: React.FC = () => {
   return (
     <div>
@@ -96,7 +132,7 @@ const Main: React.FC = () => {
   </div>
   );
 };
-
-export default Main;
+ 
+export default Main App Navbar;
 
 
