@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {Button, Row, Col, Card, Form, Container} from 'react-bootstrap';
+
 const Contact: React.FC= () => {
   const [name, setName] = useState <string> ('');
   const [email, setEmail] = useState <string> ('');
@@ -47,12 +48,12 @@ const Contact: React.FC= () => {
                                                     <Card.Title>
                                                         <h1 className="title">Contact Us</h1>
                                                     </Card.Title>
-                                                    <Card.Text>
-                                                        <p className="body">Matthew Unrein</p>
-                                                        <p className="body">769-532-6265</p>
-                                                        <p className="body">email@gmail.com</p>
-                                                        <p className="body">If you have questions or are intested in my services please fill out the form below</p>
-                                                    </Card.Text>
+                                                    
+                                                        <Card.Text className="body">Matthew Unrein</Card.Text>
+                                                        <Card.Text className="body">769-532-6265</Card.Text>
+                                                        <Card.Text className="body">email@gmail.com</Card.Text>
+                                                        <Card.Text className="body">If you have questions or are intested in my services please fill out the form below</Card.Text>
+                                                    
                                                 </Card.Body>
                                             </Col>
                                         </Row>
@@ -64,20 +65,20 @@ const Contact: React.FC= () => {
                 </div>
             </div>
         </header><div className="contact-body">
-                <text className="header">Get in Touch</text>
+                <div className="header">Get in Touch</div>
                 <Container>
                     <Row>
                         <Col>
                             <Form onSubmit={handleSubmit} id="contactForm">
-                                <Form.Group controlId="formBasicName">
+                                <Form.Group >
                                     <Form.Label htmlFor="name">Name</Form.Label>
                                     <Form.Control value= {name} onChange= {(event)=>setName(event.target.value)} type="text" id="name"placeholder="Enter Name" />
                                 </Form.Group>
-                                <Form.Group controlId="formBasicEmail">
+                                <Form.Group >
                                     <Form.Label htmlFor="email">Email</Form.Label>
                                     <Form.Control value= {email} onChange= {(event)=>setEmail(event.target.value)} type="email" id="email"placeholder="Enter Email" />
                                 </Form.Group>
-                                <Form.Group controlId="formBasicMessage">
+                                <Form.Group >
                                     <Form.Label htmlFor="message">Message</Form.Label>
                                     <Form.Control value= {message} onChange= {(event)=>setMessage(event.target.value)} as="textarea" id="message" rows={3} />
                                 </Form.Group>
