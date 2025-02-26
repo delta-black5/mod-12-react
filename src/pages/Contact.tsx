@@ -19,6 +19,32 @@ const Contact: React.FC= () => {
         const contacts = readLocalStorage ();
         contacts.push ((formData));
         localStorage.setItem("contactForm", JSON.stringify(contacts));
+
+        const validateEmail = (email: string): boolean => {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        };
+
+        const [email, setEmail] = useState("");
+const [emailError, setEmailError] = useState("");
+
+const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newEmail = e.target.value;
+    setEmail(newEmail);
+
+    if (!validateEmail(newEmail)) {
+        setEmailError("Invalid email address");
+    } else {
+        setEmailError("");
+    }
+};
+<input 
+    type="email" 
+    value={email} 
+    onChange={handleEmailChange} 
+    placeholder="Enter your email"
+/>
+{emailError && <p style={{ color: "red" }}>{emailError}</p>}
     
     // Clear the form after submission
     setName('');

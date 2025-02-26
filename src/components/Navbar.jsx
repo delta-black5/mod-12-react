@@ -5,9 +5,10 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar__logo">MyApp</div>
       <ul className="navbar__menu">
-        <NavLink to="/about" className="navbar__item">About</NavLink>
+        <NavLink to="/" className="navbar__item">About</NavLink>
         <NavLink to="/contact" className="navbar__item">Contact</NavLink>
-        <NavLink to="/" className="navbar__item">Resume</NavLink>
+        <NavLink to="/resume" className="navbar__item">Resume</NavLink>
+        <NavLink to="/portfolio" className="navbar__item">Portfolio</NavLink>
       </ul>
     </nav>
   );
