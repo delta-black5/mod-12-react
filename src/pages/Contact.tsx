@@ -20,12 +20,11 @@ const Contact: React.FC= () => {
         contacts.push ((formData));
         localStorage.setItem("contactForm", JSON.stringify(contacts));
 
-        const validateEmail = (email: string): boolean => {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
-        };
+const validateEmail = (email: string): boolean => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+};
 
-        const [email, setEmail] = useState("");
 const [emailError, setEmailError] = useState("");
 
 const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
